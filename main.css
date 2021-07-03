@@ -76,5 +76,17 @@ a:active {text-decoration: none;}
 }
 
 .features figure img{
+	border: 1px solid grey;
+	float: left;
 	border-radius: 3%;
 }
+
+.features ul {
+	display: inline-block;
+	padding: 0 0 300px 40px;
+}
+
+table, th, td {
+	border: 1.5px solid black;
+	border-collapse: collapse;
+  }
