@@ -90,3 +90,24 @@ table, th, td {
 	border: 1.5px solid black;
 	border-collapse: collapse;
   }
+
+
+.board td {
+    height: 150px;
+    width: 150px;
+    }
+
+.board table, th, td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    }
+
+.board td div {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    font-size: 150px;
+	}

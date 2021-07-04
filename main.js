@@ -81,3 +81,129 @@ function clear_table() {
 	}
 	index = 0
 }
+
+var board = document.getElementById("board")
+
+var one_one = document.getElementById("one_one")
+var one_two = document.getElementById("one_two")
+var one_three = document.getElementById("one_three")
+
+var two_one = document.getElementById("two_one")
+var two_two = document.getElementById("two_two")
+var two_three = document.getElementById("two_three")
+
+var three_one = document.getElementById("three_one")
+var three_two = document.getElementById("three_two")
+var three_three = document.getElementById("three_three")
+
+var end_message = document.getElementById("game_over")
+var clear_button = document.getElementById("clear_button")
+
+var turn = 1;
+
+var row1 = [one_one, two_one, three_one]
+var row2 = [one_two, two_two, three_two]
+var row3 = [one_three, two_three, three_three]
+var rows = [row1, row2, row3]
+
+one_one.addEventListener("click", trigger);
+one_two.addEventListener("click", trigger);
+one_three.addEventListener("click", trigger);
+
+two_one.addEventListener("click", trigger);
+two_two.addEventListener("click", trigger);
+two_three.addEventListener("click", trigger);
+
+three_one.addEventListener("click", trigger);
+three_two.addEventListener("click", trigger);
+three_three.addEventListener("click", trigger);
+
+clear_button.addEventListener("click", clear);
+
+function trigger() {
+    var squareId = this.id
+    var square = document.getElementById(squareId)
+
+    if (check_winner("X") == true) {
+        turn = 3
+    }
+
+    if (turn == 1){
+        square.innerHTML = "X";
+        turn = 2;
+        game_over("X")
+    } else if (turn == 2) {
+        square.innerHTML = "O";
+        turn = 1;
+        game_over("O")
+    }
+}
+
+function game_over(winner) {
+
+    if (check_winner(winner) == true) {
+        end_message.innerHTML = winner + " wins!";
+        turn = 3
+    } else if (check_full() == true) {
+        end_message.innerHTML = "Tie Game";
+        turn = 3
+    }
+}
+
+function create_board() {
+    var row1 = [one_one, two_one, three_one]
+    var row2 = [one_two, two_two, three_two]
+    var row3 = [one_three, two_three, three_three]
+
+    var column1 = [one_one, one_two, one_three];
+    var column2 = [two_one, two_two, two_three];
+    var column3 = [three_one, three_two, three_three];
+
+    var diagonal1 = [one_one, two_two, three_three];
+    var diagonal2 = [three_one, two_two, one_three];
+
+    var board = [column1, column2, column3, diagonal1, diagonal2, row1, row2, row3];
+
+    return board
+}
+
+function check_winner(winner) {
+    var winners = create_board();
+    var i = 0;
+
+    while (i < winners.length){
+        
+        if (winners[i][0].innerHTML == winner && winners[i][1].innerHTML == winner && winners[i][2].innerHTML == winner) {
+            return true;
+        }
+        i++;
+    }
+    return false;
+}
+
+function check_full() {
+    var winners = create_board();
+    var i = 0;
+
+    while (i < winners.length){
+        if (winners[i][0].innerHTML == "" || winners[i][1].innerHTML == "" || winners[i][2].innerHTML == "") {
+            return false;
+        }
+        i++;
+    }
+    return true;
+}
+
+function clear() {
+    var i = 0;
+    turn = 1;
+    end_message.innerHTML = ""
+
+    while (i < rows.length){
+        rows[i][0].innerHTML = "";
+        rows[i][1].innerHTML = "";
+        rows[i][2].innerHTML = "";
+        i++;
+    }
+
+}

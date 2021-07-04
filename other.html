@@ -30,21 +30,40 @@
 
 			  <p>
 			    <input id="num-one"> + <input id="num-two"> = <span id="add-sum">0</span>
-			  </p>
+			  </p> <br>
 
-			  <br><br>
+			<h3>To-Do List</h3> 
+			<p>Name: <input id="task-name"/> <span id="error-checker"></span></p> 
+			<p>Date: <input type="date" id="task-date"/> <input type="submit" value="Submit" id="submit-button"/> <input type="submit" value="Clear Table" id="clear-table"/></p>
 
-			  <h3>To-Do List</h3> <span id="error-checker"></span>
-			  <p>Name: <input id="task-name"/></p> 
-			  <p>Date: <input type="date" id="task-date"/> <input type="submit" value="Submit" id="submit-button"/> <input type="submit" value="Clear Table" id="clear-table"/></p>
+			<table style="width:450" id="task-table" class="todo">
+			<tr>
+				<th width="200px">Task Name</th>
+				<th width="200px">Task Date</th>
+				<th width="50px">Status</th>
+			</tr>
+			</table> <br>
 
-			  <table style="width:450" id="task-table">
-				<tr>
-				  <th width="200px">Task Name</th>
-				  <th width="200px">Task Date</th>
-				  <th width="50px">Status</th>
+			<h3>2 Player TicTacToe <input type="submit" value="Clear Board" id="clear_button"/></h3>
+
+			<table id="board" class="board">
+				<tr class="board">
+					<td class="board"> <div id="one_three"></div> </td>
+					<td class="board"> <div id="two_three"></div> </td>
+					<td class="board"> <div id="three_three"></div> </td>
 				</tr>
-			  </table>
+				<tr class="board">
+					<td class="board"> <div id="one_two"></div> </td>
+					<td class="board"> <div id="two_two"></div> </td>
+					<td class="board"> <div id="three_two"></div> </td>
+				</tr>
+				<tr class="board">
+					<td class="board"> <div id="one_one"></div> </td>
+					<td class="board"> <div id="two_one"></div> </td>
+					<td class="board"> <div id="three_one"></div> </td>
+				</tr>
+			</table>
+			<div id="game_over"></div>
 
 		</section>
 
