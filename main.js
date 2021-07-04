@@ -129,13 +129,17 @@ function trigger() {
     }
 
     if (turn == 1){
-        square.innerHTML = "X";
-        turn = 2;
-        game_over("X")
+        if (square.innerHTML == ""){
+            square.innerHTML = "X";
+            turn = 2;
+            game_over("X")
+        }
     } else if (turn == 2) {
-        square.innerHTML = "O";
-        turn = 1;
-        game_over("O")
+        if (square.innerHTML == ""){
+            square.innerHTML = "O";
+            turn = 1;
+            game_over("O")
+        }
     }
 }
 

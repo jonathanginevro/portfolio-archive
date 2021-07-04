@@ -3,6 +3,10 @@ body {
 	font-family:  arial;
 }
 
+body {
+	overflow: scroll;
+  }
+
 header {
 	background-color: black;
 	background-image: url("Content/unnamed.png");
@@ -50,6 +54,10 @@ section {
 	padding: 20px;
 }
 
+section p {
+	margin-right: 50%;
+}
+
 
 footer {
 	background: black;
@@ -84,6 +92,11 @@ a:active {text-decoration: none;}
 .features ul {
 	display: inline-block;
 	padding: 0 0 300px 40px;
+	font-size: 20px;
+}
+
+.features li {
+	padding: 3px;
 }
 
 table, th, td {
