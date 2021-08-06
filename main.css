@@ -38,6 +38,15 @@ nav ul li {
 	font-size: 20px;
 }
 
+ul.icon {
+	float: right;
+	padding: 14px;
+}
+
+li.icon {
+	padding: 5px 10px;
+}
+
 /* Make Hyperlink white */
 nav ul li a {
 	color: white;
