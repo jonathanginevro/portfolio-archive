@@ -79,14 +79,6 @@ footer {
 	padding: 10px 20px;
 	text-align: center;
 
-	vertical-align: middle;
-    line-height: normal;
-    margin: 0;
-    position: fixed;
-    bottom: 0px;
-    clear: both;
-    border: 1px groove #aaaaaa;
-	width: 100%;
 }
 
 li.current {
