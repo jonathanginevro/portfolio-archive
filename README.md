@@ -1,3 +1,3 @@
 # Personal Website
 
-Visit the website at joginevro.me
+Visit the website at jonathanginevro.com
