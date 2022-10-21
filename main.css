@@ -44,8 +44,6 @@ h1 {
     color: white;
     font-size: 28px;
     font-weight: 900;
-    /* letter-spacing: 2px; */
-    /* text-transform: uppercase; */
 }
 
 .hamburger {
@@ -137,19 +135,18 @@ main {
 
 .banner h1 {
     color: var(--primary);
-    /* text-decoration: underline; */
     display: block;
 }
 
 .banner h2 {
-    color: var(--dark);
+    color: var(--primary);
     display: block;
     line-height: 1.25;
 }
 
-.name h2{
-    color: var(--primary);
-    padding-top: 20px;
+.banner p {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .icons {
@@ -168,6 +165,13 @@ main {
 .icons a:hover{
     color: var(--primary);
 }
+
+
+
+
+
+
+
 
 .panels {
     padding-top: 5px;
@@ -203,12 +207,12 @@ div.primary-panel h2 {
 }
 
 footer {
-    border-bottom: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 
 	background: var(--dark);
 	color: var(--light);
@@ -222,11 +226,6 @@ footer a {
     text-decoration:none;  
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: var(--background-color);
   font-family: var(--font);
@@ -234,121 +233,82 @@ body {
   justify-content: center;
 }
 
-/* Timeline Container */
-.timeline {
-  background: var(--primary-color);
-  margin: 20px auto;
-  padding: 20px;
+ .timeline {
+	 position: relative;
+	 padding-left: 4rem;
+	 margin: 0 0 0 30px;
+	 color: white;
 }
-
-.card {
-  margin: 0 auto;
+ .timeline:before {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 4px;
+	 height: 100%;
+	 background: #27293d;
 }
-
-/* Card container */
-.card:nth-child(even) {
-  position: relative;
-  max-width: 900px;
-  min-height: 150px;
+ .timeline .timeline-container {
+	 position: relative;
+	 margin-bottom: 2.5rem;
 }
-
-.card:nth-child(odd) {
-  position: relative;
-  max-width: 900px;
+ .timeline .timeline-container .timeline-icon {
+	 position: absolute;
+	 left: -88px;
+	 top: 4px;
+	 width: 50px;
+	 height: 50px;
+	 border-radius: 50%;
+	 text-align: center;
+	 font-size: 2rem;
+	 background: #4f537b;
 }
-
-/* setting padding based on even or odd */
-.card:nth-child(odd) {
-  padding: 30px 0 30px 30px;
+ .timeline .timeline-container .timeline-icon i {
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+   font-size: 25px;
 }
-.card:nth-child(even) {
-  padding: 30px 30px 30px 0;
+ .timeline .timeline-container .timeline-icon img {
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 50%;
 }
-/* Global ::before */
-.card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid #8f2626;
+ .timeline .timeline-container .timeline-body {
+	 background: var(--dark);
+	 border-radius: 3px;
+	 padding: 20px 20px 15px;
+	 box-shadow: 1px 3px 9px rgba(0, 0, 0, .1);
 }
-
-/* Setting the border of top, bottom, left */
-.card:nth-child(odd)::before {
-  left: 0px;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
+ .timeline .timeline-container .timeline-body:before {
+	 content: '';
+	 background: inherit;
+	 width: 20px;
+	 height: 20px;
+	 display: block;
+	 position: absolute;
+	 left: -10px;
+	 transform: rotate(45deg);
+	 border-radius: 0 0 0 2px;
 }
-
-/* Setting the border of top, bottom, right */
-.card:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
+ .timeline .timeline-container .timeline-body .timeline-title {
+	 margin-bottom: 1.4rem;
 }
-
-/* Removing the border if it is the first card */
-.card:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
+ .timeline .timeline-container .timeline-body .timeline-title .badge {
+	 background: var(--dark);
+	 padding: 4px 8px;
+	 border-radius: 3px;
+	 font-size: 12px;
+	 font-weight: bold;
 }
-
-/* Removing the border if it is the last card  and it's odd */
-.card:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
+ .timeline .timeline-container .timeline-body .timeline-subtitle {
+	 font-weight: 300;
+	 font-style: italic;
+	 opacity: 0.4;
+	 margin-top: 16px;
+	 font-size: 11px;
 }
-
-/* Removing the border if it is the last card  and it's even */
-.card:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
+ .timeline .timeline-container.primary .badge, .timeline .timeline-container.primary .timeline-icon {
+	 background: var(--primary) !important;
 }
-
-/* Information about the timeline */
-.info {
-  display: flex;
-  flex-direction: column;
-  background: var(--dark);
-  color: var(--light);
-  border-radius: 10px;
-  padding: 10px;
-  min-height: 150px;
-}
-
-/* Title of the card */
-h2.title {
-  color: var(--light);
-  position: relative;
-}
-
-/* Timeline dot  */
-.title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid #8f2626;
-}
-
-/* text right if the card is even  */
-.card:nth-child(even) > .info > .title {
-  text-align: right;
-}
-
-/* setting dot to the left if the card is odd */
-.card:nth-child(odd) > .info > .title::before {
-  left: -45px;
-}
-
-/* setting dot to the right if the card is odd */
-.card:nth-child(even) > .info > .title::before {
-  right: -45px;
-}
-  
-
