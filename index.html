@@ -1,145 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan's Website</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jonathan's Website</title>
 
-    <link rel="stylesheet" href="main.css" />
-    <script src="https://kit.fontawesome.com/4dcd81e8cd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="main.css" />
+	<script src="https://kit.fontawesome.com/4dcd81e8cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
     <header>
         <div class="container">
-            <h1>Jonathan Ginevro</h1>
+            <p class="logo">JG</p>
 
             <div class="menu">
-                <a href="https://www.instagram.com/jonginevro/" target="new" ><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://github.com/jonathanginevro" target="new" ><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/jonathan-ginevro/" target="new" ><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="mailto: jonathan.ginevro@outlook.com" target="new" ><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="index.html" class="is-active">Home</a>
+                <a href="projects.html" >Projects</a>
+                <a href="resume.html" >Resume</a>
             </div>
     
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
+
     <main>
-        <section class="banner">
-            <div class="body">
-                
-              <h2 id="name">About Me</h2>
-              <p>
-                Hi, I'm Jonathan. I am a third-year computer science student at the University of Toronto. I developed this website as a personal portfolio to showcase some information about myself. Feel free to use the links above to connect or contact me!
-              </p>
+		<section class="banner">
+            
+			<div class="body">
+				
+				<p class="toptext">Hi, I'm</p>
+				<p class="bottomtext">Jonathan Ginevro</p>
 
-                <h2 id="name">Projects</h2>
-                <div class="container2">
-                    <div class="card">
-                      <div class="card-header">
-                        <img src="content/tictactoe.jpg" alt="rover" />
-                      </div>
-                      <div class="card-body">
-                        <span class="tag tag-teal">Python</span>
-                        <h4>
-                          Minimax TicTacToe Game
-                        </h4>
-                        <p>
-                          Utilized artificial intelligence to develop a TicTacToe game that is impossible to win. Studied and implemented the Minimax Algorithm, which utilizes recursive backtracking to analyze all possible outcomes, and ensures that the computer always makes the correct move.
-                        </p>
-                        <div class="user">
-                          <a href="https://github.com/jonathanginevro/tictactoe_minimax" target="new" ><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header">
-                        <img src="content/trackr.jpg" alt="ballons" />
-                      </div>
-                      <div class="card-body">
-                        <span class="tag tag-purple">Kotlin</span>
-                        <h4>
-                          Birthday Reminder App
-                        </h4>
-                        <p>
-                          Worked on a team of 6 to develop an Android application that allows users to store and manage upcoming events that they want to be reminded of. Workeed on the front end of the application and integrate SOLID Design Principles to ensure that the project aligns with modern software development standards
-                        </p>
-                        <div class="user">
-                          <a href="https://github.com/CSC207-UofT/course-project-trackr" target="new" ><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header">
-                        <img src="content/periodic_table.JPG" alt="city" />
-                      </div>
-                      <div class="card-body">
-                        <span class="tag tag-pink">Java</span>
-                        <h4>
-                          Interactive Periodic Table
-                        </h4>
-                        <p>
-                          Worked on a team of 4 to develop a full-stack periodic table, designed to assist chemistry students with various tools and functionalities to enhance their learning experience. Implemented all front-end aspects of the table and developed various interactive features and calculators throughout the table
-                        </p>
-                        <!-- <div class="user">
-                          <i class="fab fa-github fa-2x"></i>
-                        </div> -->
-                      </div>
-                    </div>
-                </div>
+				<div class="icons">
+                    <a href="https://www.instagram.com/jonginevro/" target="new"><i class="fab fa-instagram fa-3x"></i></a>
+					<a href="https://www.linkedin.com/in/jonathan-ginevro/" target="new"><i class="fab fa-linkedin fa-3x"></i></a>
+					<a href="mailto: jonathanginevro@outlook.com" target="new"><i class="fas fa-envelope fa-3x"></i></a>
+					<a href="https://github.com/jonathanginevro" target="new"><i class="fab fa-github fa-3x"></i></a>
+                    <a href="https://gitlab.com/jonginevro" target="new"><i class="fab fa-gitlab fa-3x"></i></a>
+				</div>
 
-                <h2 id="name">Experience Timeline</h2>
+                <p class="bodytext">I am a computer science student and software developer from Toronto, Ontario. This website is a place for me to showcase my projects and experiences as a developer.</p>
 
-                <div class="timeline">
-                  <div class="timeline-container primary">
-                      <div class="timeline-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                      </div>
-                      <div class="timeline-body">
-                          <h4 class="timeline-title"><span class="badge">Youth Dream Canada</span></h4>
-                          <p>Volunteer coding instructor for students at various skill levels and age groups. Teaching students the fundamental of programming, and developing students from the beginner level to full proficiency in programming and problem-solving in Python or Java.</p>
-                          <p class="timeline-subtitle">August 2021 - Present</p>
-                    </div>
-                  </div>
-                  <div class="timeline-container primary">
-                    <div class="timeline-icon">
-                        <i class="fa fa-terminal"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">Royal Bank of Canada</span></h4>
-                        <p>Worked as a co-op full-stack developer across various customer platforms and services. Worked alongside my team to develop new client onboarding features in Java. Built new mobile screens in Angular to accompany this new feature.</p>
-                        <p class="timeline-subtitle">May 2022 - August 2022</p>
-                  </div>
-                </div>
-                <div class="timeline-container primary">
-                  <div class="timeline-icon">
-                      <i class="fa fa-user-tie"></i>
-                  </div>
-                  <div class="timeline-body">
-                      <h4 class="timeline-title"><span class="badge">Arts and Science Internship Program</span></h4>
-                      <p>Member and ambassador of the University of Toronto's Arts and Science Internship Program. Responsible for serving as a student representative of the program, providing mentorship for students undergoing the job search process, and providing feedback to the ASIP staff.</p>
-                      <p class="timeline-subtitle">August 2022 - Present</p>
-                </div>
-              </div>
-            </div>
+                <p class="bodytext">I am currently studying computer science at the University of Toronto. I have course experience in web development, algorithm design, ML and system design. I am also a member and senior ambassador of the Arts and Science Internship Program (ASIP).</p>
 
-            </div>
-        </section>
+                <p class="bodytext">For the remainder of this school year, I will be completing a co-op year as a software development engineer for Amazon Robotics. I have past experience as an intern developer for RBC. I also work with Youth Dream Canada (YDC) as a coding instructor.</p>
+
+                <p class="bodytext">Feel free to reach out and connect anytime!</p>
+
+			</div>
+            
+            <div id="particles-js"></div>
+
+		</section>
     </main>
 
     <footer>
-        <a href="https://github.com/jonathanginevro" target="_blank">GitHub</a> • 
-        <a href="https://www.linkedin.com/in/jonathan-ginevro/" target="_blank">LinkedIn</a> • 
-        <a href="mailto:jonathan.ginevro@outlook.com">Email</a> • 
         Developed by Jonathan Ginevro • 
         Toronto, <script>document.write(/\d{4}/.exec(Date())[0])</script>
     </footer>
     
+    <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
     <script src="main.js"></script>
+    <script src="particles.js"></script>
 </body>
 </html>
