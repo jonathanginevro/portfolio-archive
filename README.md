@@ -6,4 +6,4 @@ Welcome to my personal website repository! This is a project that I started in 2
 
 ### Deployment
 
-My portfolio is hosted via GitHub Pages. It can be visited at [jonathanginevro.com](https://jonathanginevro.com)
+My portfolio is hosted via GitHub Pages. It can be visited at [jonginevro.com](https://jonginevro.com)
