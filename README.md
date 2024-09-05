@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Welcome to my personal website repository! This is a project that I started in 2021, and I actively update to showcase information about myself.
+Welcome to my personal website repository. This website was created in 2021, and is actively updated to showcase my projects and experiences as a developer.
 
 ### Deployment
 
